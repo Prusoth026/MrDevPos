@@ -32,27 +32,27 @@ interface Product {
 const initialProducts: Product[] = [
   {
     id: "1",
-    name: "Product 1",
+    name: "Fan",
     sku: "SKU001",
-    price: 29.99,
+    price: 2500.99,
     stock: 100,
     category: "Electronics",
   },
   {
     id: "2",
-    name: "Product 2",
+    name: "Headset",
     sku: "SKU002",
-    price: 39.99,
+    price: 589.00,
     stock: 75,
     category: "Accessories",
   },
   {
     id: "3",
-    name: "Product 3",
+    name: "Apple",
     sku: "SKU003",
     price: 19.99,
     stock: 150,
-    category: "Electronics",
+    category: "Fruits",
   },
 ];
 

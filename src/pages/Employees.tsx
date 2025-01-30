@@ -12,16 +12,16 @@ import { Search } from "lucide-react";
 const initialEmployees: Employee[] = [
   {
     id: 1,
-    name: "John Doe",
-    email: "john@example.com",
+    name: "Rajees",
+    email: "rajees@gmail.com",
     role: "Cashier",
     schedule: "9:00 AM - 5:00 PM",
     status: "Active",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    email: "jane@example.com",
+    name: "Muhila",
+    email: "muhila@gmail.com",
     role: "Manager",
     schedule: "8:00 AM - 4:00 PM",
     status: "Active",

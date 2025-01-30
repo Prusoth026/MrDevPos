@@ -57,7 +57,7 @@ export function DashboardSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="p-4">
-        <h2 className="text-2xl font-bold text-primary">DeltaPOS</h2>
+        <h2 className="text-2xl font-bold text-primary">Mr Dev POS</h2>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

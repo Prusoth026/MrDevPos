@@ -24,7 +24,6 @@ const Sales = () => {
   const paymentMethods = [
     { method: "Cash", amount: 1245.75, transactions: 22 },
     { method: "Credit Card", amount: 988.75, transactions: 18 },
-    { method: "Debit Card", amount: 350.00, transactions: 7 },
   ];
 
   const handlePrint = () => {

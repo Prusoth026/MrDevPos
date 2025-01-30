@@ -8,13 +8,13 @@ import { toast } from "sonner";
 
 const DEMO_USERS = {
   admin: {
-    email: "admin@example.com",
-    password: "admin123",
+    email: "admin@gmail.com",
+    password: "admin",
     role: "admin"
   },
   employee: {
-    email: "employee@example.com",
-    password: "employee123",
+    email: "employee@gmail.com",
+    password: "employee",
     role: "employee"
   }
 };
@@ -58,7 +58,7 @@ const Login = () => {
       <Card className="w-full max-w-md bg-white/90 backdrop-blur-lg shadow-xl border-0">
         <CardHeader className="space-y-1 text-center">
           <CardTitle className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            DeltaPOS Login
+            Mr Dev Pos Login
           </CardTitle>
           <p className="text-sm text-muted-foreground">
             Enter your credentials to access the system
@@ -100,10 +100,10 @@ const Login = () => {
                 "Sign In"
               )}
             </Button>
-            <div className="text-sm text-muted-foreground text-center space-y-2">
+            {/* <div className="text-sm text-muted-foreground text-center space-y-2">
               <p>Demo Admin: admin@example.com / admin123</p>
               <p>Demo Employee: employee@example.com / employee123</p>
-            </div>
+            </div> */}
           </form>
         </CardContent>
       </Card>

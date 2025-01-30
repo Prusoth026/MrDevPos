@@ -28,9 +28,9 @@ const POS = () => {
 
   // Mock product database - replace with real data later
   const mockProducts = [
-    { id: "1", name: "Milk", price: 3.99, barcode: "123456" },
-    { id: "2", name: "Bread", price: 2.49, barcode: "234567" },
-    { id: "3", name: "Eggs", price: 4.99, barcode: "345678" },
+    { id: "1", name: "Milk", price: 1458.99, barcode: "123456" },
+    { id: "2", name: "Bread", price: 908.49, barcode: "234567" },
+    { id: "3", name: "Eggs", price: 1824.99, barcode: "345678" },
   ];
 
   const handleBarcodeScanned = (barcode: string) => {
