@@ -23,7 +23,6 @@ import { Plus, Pencil, Trash2, Search } from "lucide-react";
 interface Product {
   id: string;
   name: string;
-  sku: string;
   price: number;
   stock: number;
   category: string;
@@ -33,7 +32,6 @@ const initialProducts: Product[] = [
   {
     id: "1",
     name: "Fan",
-    sku: "SKU001",
     price: 2500.99,
     stock: 100,
     category: "Electronics",
@@ -41,7 +39,6 @@ const initialProducts: Product[] = [
   {
     id: "2",
     name: "Headset",
-    sku: "SKU002",
     price: 589.00,
     stock: 75,
     category: "Accessories",
@@ -49,7 +46,6 @@ const initialProducts: Product[] = [
   {
     id: "3",
     name: "Apple",
-    sku: "SKU003",
     price: 19.99,
     stock: 150,
     category: "Fruits",
@@ -64,7 +60,6 @@ const Products = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [formData, setFormData] = useState({
     name: "",
-    sku: "",
     price: "",
     stock: "",
     category: "",
@@ -87,7 +82,6 @@ const Products = () => {
     const newProduct: Product = {
       id: Date.now().toString(),
       name: formData.name,
-      sku: formData.sku,
       price: parseFloat(formData.price),
       stock: parseInt(formData.stock),
       category: formData.category,
@@ -97,7 +91,6 @@ const Products = () => {
     setIsAddDialogOpen(false);
     setFormData({
       name: "",
-      sku: "",
       price: "",
       stock: "",
       category: "",
@@ -108,7 +101,6 @@ const Products = () => {
     setCurrentProduct(product);
     setFormData({
       name: product.name,
-      sku: product.sku,
       price: product.price.toString(),
       stock: product.stock.toString(),
       category: product.category,
@@ -122,7 +114,6 @@ const Products = () => {
     const updatedProduct: Product = {
       id: currentProduct.id,
       name: formData.name,
-      sku: formData.sku,
       price: parseFloat(formData.price),
       stock: parseInt(formData.stock),
       category: formData.category,
@@ -135,7 +126,6 @@ const Products = () => {
     setCurrentProduct(null);
     setFormData({
       name: "",
-      sku: "",
       price: "",
       stock: "",
       category: "",
@@ -173,15 +163,6 @@ const Products = () => {
                     id="name"
                     name="name"
                     value={formData.name}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="grid w-full gap-2">
-                  <Label htmlFor="sku">SKU</Label>
-                  <Input
-                    id="sku"
-                    name="sku"
-                    value={formData.sku}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -237,7 +218,6 @@ const Products = () => {
             <TableHeader>
               <TableRow>
                 <TableHead>Name</TableHead>
-                <TableHead>SKU</TableHead>
                 <TableHead>Price</TableHead>
                 <TableHead>Stock</TableHead>
                 <TableHead>Category</TableHead>
@@ -248,8 +228,7 @@ const Products = () => {
               {filteredProducts.map((product) => (
                 <TableRow key={product.id}>
                   <TableCell>{product.name}</TableCell>
-                  <TableCell>{product.sku}</TableCell>
-                  <TableCell>${product.price.toFixed(2)}</TableCell>
+                  <TableCell>{product.price.toFixed(2)}</TableCell>
                   <TableCell>{product.stock}</TableCell>
                   <TableCell>{product.category}</TableCell>
                   <TableCell className="text-right space-x-2">
@@ -287,15 +266,6 @@ const Products = () => {
                     id="edit-name"
                     name="name"
                     value={formData.name}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="grid w-full gap-2">
-                  <Label htmlFor="edit-sku">SKU</Label>
-                  <Input
-                    id="edit-sku"
-                    name="sku"
-                    value={formData.sku}
                     onChange={handleInputChange}
                   />
                 </div>

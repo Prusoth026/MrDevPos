@@ -22,7 +22,6 @@ import {
 const mockStockData = Array.from({ length: 50 }, (_, i) => ({
   id: (i + 1).toString(),
   name: `Product ${i + 1}`,
-  sku: `SKU${(i + 1).toString().padStart(3, '0')}`,
   quantity: Math.floor(Math.random() * 200),
   minStock: 10,
   category: ['Electronics', 'Clothing', 'Food', 'Accessories'][Math.floor(Math.random() * 4)],
@@ -36,7 +35,6 @@ const Stock = () => {
   const filteredStock = mockStockData.filter(
     (item) =>
       item.name.toLowerCase().includes(search.toLowerCase()) ||
-      item.sku.toLowerCase().includes(search.toLowerCase()) ||
       item.category.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -70,7 +68,6 @@ const Stock = () => {
             <TableHeader>
               <TableRow>
                 <TableHead>Name</TableHead>
-                <TableHead>SKU</TableHead>
                 <TableHead>Category</TableHead>
                 <TableHead>Quantity</TableHead>
                 <TableHead>Status</TableHead>
@@ -80,16 +77,14 @@ const Stock = () => {
               {currentItems.map((item) => (
                 <TableRow key={item.id}>
                   <TableCell>{item.name}</TableCell>
-                  <TableCell>{item.sku}</TableCell>
                   <TableCell>{item.category}</TableCell>
                   <TableCell>{item.quantity}</TableCell>
                   <TableCell>
                     <span
-                      className={`px-2 py-1 rounded-full text-xs ${
-                        item.quantity <= item.minStock
-                          ? "bg-red-100 text-red-800"
-                          : "bg-green-100 text-green-800"
-                      }`}
+                      className={`px-2 py-1 rounded-full text-xs ${item.quantity <= item.minStock
+                        ? "bg-red-100 text-red-800"
+                        : "bg-green-100 text-green-800"
+                        }`}
                     >
                       {item.quantity <= item.minStock ? "Low Stock" : "In Stock"}
                     </span>
@@ -105,7 +100,7 @@ const Stock = () => {
             <PaginationItem>
               <PaginationPrevious
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                className={`cursor-pointer ${currentPage === totalPages ? "pointer-events-none opacity-50 cursor-not-allowed" : ""}`}
               />
             </PaginationItem>
             {Array.from({ length: totalPages }, (_, i) => (
@@ -113,17 +108,20 @@ const Stock = () => {
                 <PaginationLink
                   onClick={() => setCurrentPage(i + 1)}
                   isActive={currentPage === i + 1}
+                  className="cursor-pointer"
                 >
                   {i + 1}
                 </PaginationLink>
               </PaginationItem>
+
             ))}
             <PaginationItem>
               <PaginationNext
                 onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                className={`cursor-pointer ${currentPage === totalPages ? "pointer-events-none opacity-50 cursor-not-allowed" : ""}`}
               />
             </PaginationItem>
+
           </PaginationContent>
         </Pagination>
       </div>

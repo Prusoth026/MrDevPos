@@ -60,7 +60,7 @@ export function ProductList({ products, onProductAdd, onBarcodeScanned }: Produc
           {filteredProducts.map((product) => (
             <TableRow key={product.id}>
               <TableCell>{product.name}</TableCell>
-              <TableCell>${product.price.toFixed(2)}</TableCell>
+              <TableCell>{product.price.toFixed(2)}</TableCell>
               <TableCell>
                 <Button
                   variant="outline"

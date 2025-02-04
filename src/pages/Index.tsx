@@ -6,9 +6,6 @@ import {
   Users,
   Package,
   Receipt,
-  DollarSign,
-  ShoppingCart,
-  BarChart,
 } from "lucide-react";
 import {
   BarChart as RechartsBarChart,

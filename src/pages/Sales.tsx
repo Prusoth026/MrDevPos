@@ -50,7 +50,7 @@ const Sales = () => {
               <CardTitle>Total Sales</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">${salesData.totalSales.toFixed(2)}</p>
+              <p className="text-2xl font-bold">{salesData.totalSales.toFixed(2)}</p>
             </CardContent>
           </Card>
 
@@ -68,7 +68,7 @@ const Sales = () => {
               <CardTitle>Average Ticket</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">${salesData.averageTicket.toFixed(2)}</p>
+              <p className="text-2xl font-bold">{salesData.averageTicket.toFixed(2)}</p>
             </CardContent>
           </Card>
         </div>
@@ -91,7 +91,7 @@ const Sales = () => {
                   {paymentMethods.map((payment) => (
                     <TableRow key={payment.method}>
                       <TableCell>{payment.method}</TableCell>
-                      <TableCell>${payment.amount.toFixed(2)}</TableCell>
+                      <TableCell>{payment.amount.toFixed(2)}</TableCell>
                       <TableCell>{payment.transactions}</TableCell>
                     </TableRow>
                   ))}
@@ -112,15 +112,15 @@ const Sales = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Refunds:</span>
-                  <span className="font-medium">${salesData.refunds.toFixed(2)}</span>
+                  <span className="font-medium">{salesData.refunds.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Tax Collected:</span>
-                  <span className="font-medium">${salesData.taxCollected.toFixed(2)}</span>
+                  <span className="font-medium">{salesData.taxCollected.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Discounts:</span>
-                  <span className="font-medium">${salesData.discounts.toFixed(2)}</span>
+                  <span className="font-medium">{salesData.discounts.toFixed(2)}</span>
                 </div>
               </div>
             </CardContent>

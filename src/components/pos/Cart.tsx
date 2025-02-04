@@ -48,7 +48,7 @@ export function Cart({
               <div>
                 <div className="font-medium">{item.name}</div>
                 <div className="text-sm text-muted-foreground">
-                  ${item.price.toFixed(2)}
+                  {item.price.toFixed(2)}
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -82,7 +82,7 @@ export function Cart({
         <div className="p-4 border-t space-y-4">
           <div className="flex justify-between text-lg font-bold">
             <span>Total:</span>
-            <span>${calculateTotal().toFixed(2)}</span>
+            <span>{calculateTotal().toFixed(2)}</span>
           </div>
           
           <div className="flex gap-2">

@@ -9,7 +9,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
-import { CreditCard, DollarSign, Receipt } from "lucide-react";
+import { CreditCard, Receipt } from "lucide-react";
 
 interface PaymentProcessorProps {
   total: number;
@@ -29,7 +29,7 @@ export const PaymentProcessor = ({ total, onPaymentComplete }: PaymentProcessorP
         const change = paid - total;
         toast({
           title: "Payment Successful",
-          description: `Change due: $${change.toFixed(2)}`,
+          description: `Change due: ${change.toFixed(2)}`,
         });
         onPaymentComplete();
         setIsOpen(false);
@@ -56,7 +56,6 @@ export const PaymentProcessor = ({ total, onPaymentComplete }: PaymentProcessorP
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>
-        <DollarSign className="mr-2 h-4 w-4" />
         Process Payment
       </Button>
 
@@ -72,7 +71,6 @@ export const PaymentProcessor = ({ total, onPaymentComplete }: PaymentProcessorP
                 onClick={() => setPaymentMethod("cash")}
                 className="flex-1"
               >
-                <DollarSign className="mr-2 h-4 w-4" />
                 Cash
               </Button>
               <Button
@@ -96,7 +94,7 @@ export const PaymentProcessor = ({ total, onPaymentComplete }: PaymentProcessorP
                   placeholder="Enter amount"
                 />
                 <div className="text-sm text-muted-foreground">
-                  Total: ${total.toFixed(2)}
+                  Total:{total.toFixed(2)}
                 </div>
               </div>
             )}

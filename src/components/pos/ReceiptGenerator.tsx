@@ -69,9 +69,9 @@ export const ReceiptGenerator = ({
                   <tr key={index}>
                     <td>{item.name}</td>
                     <td className="text-right">{item.quantity}</td>
-                    <td className="text-right">${item.price.toFixed(2)}</td>
+                    <td className="text-right">{item.price.toFixed(2)}</td>
                     <td className="text-right">
-                      ${(item.quantity * item.price).toFixed(2)}
+                      {(item.quantity * item.price).toFixed(2)}
                     </td>
                   </tr>
                 ))}
@@ -81,7 +81,7 @@ export const ReceiptGenerator = ({
 
           <div className="flex justify-between font-bold">
             <span>Total</span>
-            <span>${total.toFixed(2)}</span>
+            <span>{total.toFixed(2)}</span>
           </div>
 
           <div className="text-center text-sm text-muted-foreground">
