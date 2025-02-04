@@ -8,12 +8,12 @@ import { toast } from "sonner";
 
 const DEMO_USERS = {
   admin: {
-    email: "admin",
+    email: "admin@gmail.com",
     password: "1234",
     role: "admin"
   },
   employee: {
-    email: "employee",
+    email: "employee@gmail.com",
     password: "1234",
     role: "employee"
   }
@@ -101,8 +101,8 @@ const Login = () => {
               )}
             </Button>
             <div className="text-sm text-muted-foreground text-center space-y-2">
-              <p>Demo Admin: admin / 1234</p>
-              <p>Demo Employee: employee / 1234</p>
+              <p>Demo Admin: admin@gmail.com / 1234</p>
+              <p>Demo Employee: employee@gmail.com / 1234</p>
             </div> 
           </form>
         </CardContent>
