@@ -8,13 +8,13 @@ import { toast } from "sonner";
 
 const DEMO_USERS = {
   admin: {
-    email: "admin@gmail.com",
-    password: "admin",
+    email: "admin",
+    password: "1234",
     role: "admin"
   },
   employee: {
-    email: "employee@gmail.com",
-    password: "employee",
+    email: "employee",
+    password: "1234",
     role: "employee"
   }
 };
@@ -67,11 +67,11 @@ const Login = () => {
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">UserName</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Enter your username"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -100,10 +100,10 @@ const Login = () => {
                 "Sign In"
               )}
             </Button>
-            {/* <div className="text-sm text-muted-foreground text-center space-y-2">
-              <p>Demo Admin: admin@example.com / admin123</p>
-              <p>Demo Employee: employee@example.com / employee123</p>
-            </div> */}
+            <div className="text-sm text-muted-foreground text-center space-y-2">
+              <p>Demo Admin: admin / 1234</p>
+              <p>Demo Employee: employee / 1234</p>
+            </div> 
           </form>
         </CardContent>
       </Card>
