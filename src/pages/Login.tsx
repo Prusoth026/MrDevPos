@@ -67,7 +67,7 @@ const Login = () => {
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">UserName</Label>
+              <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
                 type="email"
