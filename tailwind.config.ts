@@ -56,7 +56,7 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'login-gradient': 'linear-gradient(to right, #ee9ca7, #ffdde1)',
-        'dashboard-gradient': 'linear-gradient(102.3deg, rgba(147,39,143,1) 5.9%, rgba(234,172,232,1) 64%, rgba(246,219,245,1) 89%)',
+        'dashboard-gradient': 'linear-gradient(90deg, #ECEFF1 0%, #FFFFFF 100%)',
         'pos-gradient': 'linear-gradient(90deg, #FEC6A1 0%, #F97316 100%)'
       },
       borderRadius: {
